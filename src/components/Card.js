@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-function Card() {
+function Card(props) {
   return (
     <CardBox>
-      <Task>Descrição da task</Task>
+      <Task>{props.description}</Task>
       <Flex>
-        <User
-          src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
-          alt="user"
-        />
-        <Tag>tag</Tag>
+        <User src={props.user} alt="user" />
+        <Tag>{props.tag}</Tag>
       </Flex>
     </CardBox>
   );
@@ -21,6 +18,7 @@ const CardBox = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 15px 10px;
+  margin: 5px;
   width: 280px;
   height: 81px;
   background: #ffffff;

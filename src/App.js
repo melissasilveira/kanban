@@ -3,7 +3,7 @@ import Column from "./components/Column";
 import Card from "./components/Card";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import { tasks } from "./data";
+import { tasks, columns } from "./data";
 
 const theme = {
   toDo: "#59B4D1",
@@ -12,23 +12,55 @@ const theme = {
   done: "#59D090",
 };
 
+// function foo(props) {
+//   console.log(props.title);
+// }
+
+// foo({ title: "meu titulo", description: "descricao" });
+
+// <Foo title="titulo" description="descricao" />
+
 function App() {
   return (
     <React.Fragment>
       <Title>Kanban</Title>
       <ColumnsBox>
         <ThemeProvider theme={theme} />
-        <Column>
-          <Card></Card>
+        <Column icon={columns.toDo.icon} title={columns.toDo.title}>
+          {tasks.toDo.map((task) => (
+            <Card
+              user={task.user}
+              description={task.description}
+              tag={task.tag}
+            />
+          ))}
         </Column>
-        <Column>
-          <Card />
+        <Column icon={columns.inProgress.icon} title={columns.inProgress.title}>
+          {tasks.inProgress.map((task) => (
+            <Card
+              user={task.user}
+              description={task.description}
+              tag={task.tag}
+            />
+          ))}
         </Column>
-        <Column>
-          <Card />
+        <Column icon={columns.review.icon} title={columns.review.title}>
+          {tasks.review.map((task) => (
+            <Card
+              user={task.user}
+              description={task.description}
+              tag={task.tag}
+            />
+          ))}
         </Column>
-        <Column>
-          <Card />
+        <Column icon={columns.done.icon} title={columns.done.title}>
+          {tasks.done.map((task) => (
+            <Card
+              user={task.user}
+              description={task.description}
+              tag={task.tag}
+            />
+          ))}
         </Column>
       </ColumnsBox>
     </React.Fragment>
@@ -46,7 +78,7 @@ const Title = styled.h1`
 
 const ColumnsBox = styled.div`
   display: flex;
-  justify-content: space-evenly;
+
   padding: 20px 60px;
   gap: 35px;
 `;

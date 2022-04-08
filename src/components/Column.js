@@ -4,20 +4,21 @@ function Column(props) {
   return (
     <ColumnBox>
       <ColumnTitle>
-        <Icon src="todo.png" alt="icon" />
-        <Title>To Do</Title>
+        <Icon src={props.icon} alt="icon" />
+        <Title>{props.title}</Title>
       </ColumnTitle>
       {props.children}
     </ColumnBox>
   );
 }
 
+// como estilizar por props?
+
 const ColumnBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
-  height: 221px;
   background: #59b4d1;
   border-radius: 0px 0px 4px 4px;
   padding: 5px;
