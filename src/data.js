@@ -4,11 +4,13 @@ export const tasks = {
       description: "Christmas Banners",
       user: "/avatar/1.png",
       tag: "label",
+      tagColor: "#59B4D1",
     },
     {
       description: "Redo Portfolio",
       user: "/avatar/1.png",
       tag: "label",
+      tagColor: "#59B4D1",
     },
   ],
   inProgress: [
@@ -16,11 +18,13 @@ export const tasks = {
       description: "Coffee Break",
       user: "/avatar/2.png",
       tag: "Always",
+      tagColor: "#D0935A",
     },
     {
       description: "Updating Portfolio",
       user: "/avatar/2.png",
       tag: "Webflow",
+      tagColor: "#D0935A",
     },
   ],
   review: [
@@ -28,16 +32,19 @@ export const tasks = {
       description: "Release to Figma Community",
       user: "/avatar/1.png",
       tag: "Release",
+      tagColor: "#945AD1",
     },
     {
       description: "User Feedback",
       user: "/avatar/1.png",
       tag: "Feedback",
+      tagColor: "#945AD1",
     },
     {
       description: "Background images from humaaans.com",
       user: "/avatar/1.png",
       tag: "Sourcing",
+      tagColor: "#945AD1",
     },
   ],
   done: [
@@ -45,16 +52,19 @@ export const tasks = {
       description: "Style Guide",
       user: "/avatar/2.png",
       tag: "UI",
+      tagColor: "#59D090",
     },
     {
       description: "Component Library",
       user: "/avatar/2.png",
       tag: "UI",
+      tagColor: "#59D090",
     },
     {
       description: "Sticker Components",
       user: "/avatar/2.png",
       tag: "UI",
+      tagColor: "#59D090",
     },
   ],
 };

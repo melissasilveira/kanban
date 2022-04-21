@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 function Column(props) {
   return (
-    <ColumnBox>
+    <ColumnBox color={props.color}>
       <ColumnTitle>
         <Icon src={props.icon} alt="icon" />
         <Title>{props.title}</Title>
@@ -19,7 +19,7 @@ const ColumnBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  background: #59b4d1;
+  background: ${(props) => props.color};
   border-radius: 0px 0px 4px 4px;
   padding: 5px;
   border-top: 5px solid rgba(0, 0, 0, 0.1);

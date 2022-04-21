@@ -7,7 +7,7 @@ function Card(props) {
       <Task>{props.description}</Task>
       <Flex>
         <User src={props.user} alt="user" />
-        <Tag>{props.tag}</Tag>
+        <Tag color={props.tagColor}>{props.tag}</Tag>
       </Flex>
     </CardBox>
   );
@@ -46,7 +46,7 @@ const Tag = styled.button`
   align-items: center;
   padding: 5px 4px;
   height: 20px;
-  background-color: #59b4d1;
+  background-color: ${(props) => props.color};
   border-radius: 2px;
   font-style: normal;
   font-weight: 700;
